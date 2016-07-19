@@ -2,7 +2,7 @@
 """
 Usage: manifestor
   manifestor get <fields>...
-
+  manifestor get-value <field>
 
 Options:
 
@@ -20,13 +20,15 @@ Sub-Commands:
 
 """
 import sys
-from manifestor.command import io_get
+from manifestor.command import io_get, io_get_value
 from docopt import docopt
 
 if __name__ == '__main__':
     arguments = docopt(__doc__)
     if arguments.get('get'):
        io_get(sys.stdin.read(), arguments['<fields>'])
+    elif arguments.get('get-value'):
+       io_get_value(sys.stdin.read(), arguments['<field>'])
     else:
        sys.stderr.write(__doc__)
        sys.exit(-1)

@@ -15,6 +15,16 @@ def io_get(yaml_doc, pointers):
     sys.exit(returncode)
 
 
+def io_get_value(yaml_doc, pointer):
+    _, val = next(
+        _get(_parse(yaml_doc), [pointer]),
+        (None, None)
+    )
+    if val:
+        sys.stdout.write(val)
+    else:
+        sys.exit(1)
+
 ###############################################################################
 # Internal
 ###############################################################################
