@@ -6,7 +6,7 @@ setup(
     maintainer='Eric Moritz',
     maintainer_email='eric.moritz@gmail.com',
     url='https://github.com/ericmoritz/python-manifestor',
-    version='0.0.0',
+    version='0.0.1',
     packages=find_packages(),
     scripts=['bin/manifestor'],
     install_requires=[
