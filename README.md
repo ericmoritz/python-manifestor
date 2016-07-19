@@ -26,7 +26,14 @@ A field is a JSON Pointer to a schema.org short name.
 ## Example
 
 ```
-$ cat features/fixtures/manifest.yaml | manifestor get /name /author/name /softwareVersion
+$ cat << EOF
+@context:
+  @vocab: http://schema.org/
+
+name: test-fixture
+author:
+  name: Eric
+EOF | manifestor get /name /author/name /softwareVersion
 /softwareVersion: null
 /author/name: Eric
 /name: test-fixture
