@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+"""
+Usage: manifestor
+  manifestor get <fields>...
+
+
+Options:
+
+  -h --help  Show help for command
+
+
+Fields:
+
+A field is a JSON Pointer to a schema.org short name.
+
+Sub-Commands:
+
+* require: returns a non-zero error if any required fields are missing
+* get: returns a CSV of JSON Pointer/value pairs
+
+"""
+import sys
+from manifestor.command import io_get
+from docopt import docopt
+
+if __name__ == '__main__':
+    arguments = docopt(__doc__)
+    if arguments.get('get'):
+       io_get(sys.stdin.read(), arguments['<fields>'])
+    else:
+       sys.stderr.write(__doc__)
+       sys.exit(-1)

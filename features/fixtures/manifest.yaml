@@ -1,0 +1,6 @@
+@context:
+  @vocab: http://schema.org/
+
+name: test-fixture
+author:
+  name: Eric
