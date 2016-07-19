@@ -3,6 +3,7 @@ A simple project manifest tool
 
 ## Usage
 
+```
 Usage: manifestor
   manifestor get &lt;fields&gt;...
 
@@ -10,6 +11,7 @@ Usage: manifestor
 Options:
 
   -h --help  Show help for command
+```
 
 ### Fields:
 
