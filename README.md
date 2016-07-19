@@ -4,7 +4,7 @@ A simple project manifest tool
 ## Usage
 
 Usage: manifestor
-  manifestor get <fields>...
+  manifestor get &lt;fields&gt;...
 
 
 Options:
